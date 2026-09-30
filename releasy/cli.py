@@ -17,7 +17,7 @@ MAGENTA = "\033[35m"
 DIM = "\033[2m"
 
 def print_banner():
-    print(f"{CYAN}{BOLD}releasy{RESET} {DIM}v{__version__} — Zero-friction SemVer & Changelog engine{RESET}\n")
+    print(f"{CYAN}{BOLD}releasy{RESET} {DIM}v{__version__} - Zero-friction SemVer & Changelog engine{RESET}\n")
 
 def get_current_and_next_version(latest_tag: str, bump_override: str, commits: list) -> tuple:
     if latest_tag:
