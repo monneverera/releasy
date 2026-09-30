@@ -10,7 +10,8 @@ readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
 authors = [
-    { name = "Remon", email = "monneverera@users.noreply.github.com" }
+    { name = "Remon", email = "monneverera@users.noreply.github.com" },
+    { name = "Orion", email = "orion@lumenresearch.ai" }
 ]
 keywords = ["git", "release", "semver", "changelog", "conventional-commits", "cli"]
 classifiers = [

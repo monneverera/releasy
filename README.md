@@ -93,4 +93,4 @@ releasy release --bump minor
 
 ## 📄 License
 
-MIT © [Remon](https://github.com/monneverera)
+MIT © [Remon](https://github.com/monneverera) & Orion (Lumen Lab)
