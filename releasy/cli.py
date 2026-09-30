@@ -16,6 +16,23 @@ RED = "\033[31m"
 MAGENTA = "\033[35m"
 DIM = "\033[2m"
 
+def setup_windows_vt():
+    """Enable Virtual Terminal Processing on Windows console to render ANSI colors properly."""
+    if os.name == "nt":
+        try:
+            import ctypes
+            kernel32 = ctypes.windll.kernel32
+            handle = kernel32.GetStdHandle(-11)  # STD_OUTPUT_HANDLE
+            mode = ctypes.c_ulong()
+            if kernel32.GetConsoleMode(handle, ctypes.byref(mode)):
+                # ENABLE_VIRTUAL_TERMINAL_PROCESSING = 0x0004
+                if not (mode.value & 0x0004):
+                    kernel32.SetConsoleMode(handle, mode.value | 0x0004)
+        except Exception:
+            pass
+
+setup_windows_vt()
+
 def print_banner():
     print(f"{CYAN}{BOLD}releasy{RESET} {DIM}v{__version__} - Zero-friction SemVer & Changelog engine{RESET}\n")
 
